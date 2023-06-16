@@ -55,7 +55,7 @@ def main(project_path: str, channel_number: int):
         slice[slice < lower_threshold] = 0
         slice[slice > upper_threshold] = 0
         slice[slice > 1] = 1
-        tifffile.imwrite(f"temp_{z:07}.tiff", slice)
+        tifffile.imwrite(f"temp_{z:07}.tiff", slice.astype("uint16"))
 
     create_mask_project(project_path)
 
