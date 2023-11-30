@@ -21,3 +21,13 @@ A script that leverages the syGlass Python module to export one channel masked b
 ```
 python channel_as_mask.py [path/to/project.syg] [imageChannelNumber] [maskChannelNumber]
 ```
+
+## tiff_channel_as_mask.py
+
+The same as `channel_as_mask.py`, but instead operating on TIFF slices that have already been exported from a syGlass project. The directory to these TIFFs is provided as an additional argument.
+
+### Usage
+
+```
+python channel_as_mask.py [path/to/project.syg] [path/to/tiff/directory] [imageChannelNumber] [maskChannelNumber]
+```
